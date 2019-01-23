@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeGym</title>
+    <script>
+        function isPrime(number) {
+            number = parseInt(number);
+            let dem = 0;
+            if (number == 2) {
+                return true;
+            } else {
+                for (let i = 2; i <= Math.sqrt(number); i++) {
+                    if (number % i == 0) {
+                        dem++;
+                    }
+                }
+            }
+            if (dem == 0) {
+                return true ;
+            } else {
+                return false;
+            }
+
+        }
+    </script>
+</head>
+<body>
+<script>
+    for (let i = 2 ; i <= 1000 ; i++) {
+        if (isPrime(i)) {
+            document.write(i + "&nbsp;"+ "&nbsp;");
+        }
+    }
+</script>
+
+</body>
+</html>
